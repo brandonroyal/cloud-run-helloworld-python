@@ -38,7 +38,7 @@ steps:
       ]
 
   - id: "link revision on pull request"
-    name: "gcr.io/${PROJECT_ID}/deployment-previews" # our custom builder
+    name: "gcr.io/broyal-playground/deployment-previews@sha256:e912fa0cb09cec63c8e2bacb1e2fcaf02e22d968233af0321f43c2b924b5acbe" # our custom builder
 #     args:
 #       [
 #         "set",

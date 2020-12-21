@@ -38,23 +38,23 @@ steps:
       ]
 
   - id: "link revision on pull request"
-    name: "gcr.io/${PROJECT_ID}/deployment-previews:1" # our custom builder
-    args:
-      [
-        "set",
-        "--project-id",
-        "${PROJECT_ID}",
-        "--region",
-        "${_REGION}",
-        "--service",
-        "${_SERVICE_NAME}",
-        "--pull-request",
-        "${_PR_NUMBER}",
-        "--repo-name",
-        "${_GITHUB_REPO}",
-        "--commit-sha",
-        "${SHORT_SHA}",
-      ]
+    name: "gcr.io/${PROJECT_ID}/deployment-previews" # our custom builder
+#     args:
+#       [
+#         "set",
+#         "--project-id",
+#         "${PROJECT_ID}",
+#         "--region",
+#         "${_REGION}",
+#         "--service",
+#         "${_SERVICE_NAME}",
+#         "--pull-request",
+#         "${_PR_NUMBER}",
+#         "--repo-name",
+#         "${_GITHUB_REPO}",
+#         "--commit-sha",
+#         "${SHORT_SHA}",
+#       ]
 
 substitutions:
   _SERVICE_NAME: myservice
